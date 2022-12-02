@@ -1,16 +1,19 @@
-import SinglePokemon from "./PokemonCard";
+import PokemonCard from "./PokemonCard";
+import './PokemonList.css'
 
-const PokemonList = () => {
+const PokemonList = ({pokemons}) => {
+    
     return (
-        <div>
-            <h2>
-                I'm a PokemonList
-            </h2>
-                <SinglePokemon/>
-                <SinglePokemon/>
-                <SinglePokemon/>
-                <SinglePokemon/>
-        </div>
+        <section >
+           <h2>Pokemons</h2>
+           <ul className="pokemon-list-box">{pokemons.map((pokemon, index) => {
+                return (
+                    <PokemonCard pokemon={pokemon} key={index}/>
+                )
+           })} 
+    
+            </ul>
+        </section>
     );
 };
 

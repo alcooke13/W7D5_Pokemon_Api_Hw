@@ -1,0 +1,12 @@
+h2 {
+    text-align: center;
+    padding: 5%;
+}
+
+.pokemon-list-box {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    
+}

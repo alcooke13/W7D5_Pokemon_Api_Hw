@@ -1,6 +1,6 @@
-const PokemonCard = () => {
+const PokemonCard = ({pokemon}) => {
     return (
-        <p>I'm a single pokemon</p>
+        <li>{pokemon.name}</li>
     );
 };
 
