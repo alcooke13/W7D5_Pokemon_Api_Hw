@@ -1,0 +1,11 @@
+
+
+.App {
+    background-image: url("../src/images/pokemon_background.png");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /* margin-top: -1.3rem; */
+}

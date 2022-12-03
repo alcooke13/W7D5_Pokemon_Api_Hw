@@ -13,7 +13,7 @@ const PokemonContainer = () => {
     
     return (
         <div>
-            <h1>Pokedex</h1>
+            <header></header>
             <PokemonList pokemons={pokemons}/>
             
         </div>
