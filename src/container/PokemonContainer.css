@@ -5,3 +5,14 @@ h1 {
     font-size: 34px;
     font-style: italic; 
 }
+
+input {
+    width: 300px;
+    height: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container-box {
+    text-align: center;
+}

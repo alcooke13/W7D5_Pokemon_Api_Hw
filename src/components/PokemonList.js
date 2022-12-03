@@ -1,10 +1,22 @@
+import { useState } from "react";
 import PokemonCard from "./PokemonCard";
 import './PokemonList.css'
 
-const PokemonList = ({pokemons}) => {
+const PokemonList = () => {
+    const [pokemons, setPokemons] = useState([]);
+    const [filter, setFilter] = useState("");
+
+    const pokemonData = "https://pokeapi.co/api/v2/pokemon?limit=50";
+    fetch(pokemonData)
+    .then(response => response.json())
+    .then(pokemonList => setPokemons(pokemonList.results))
+
     
+
+
     return (
         <section className="list-section" >
+           <input type="text" placeholder="Search" />
            <div className="pokemon-list-box">{pokemons.map((pokemon, index) => {
                 return (
                     <PokemonCard pokemon={pokemon} key={index}/>

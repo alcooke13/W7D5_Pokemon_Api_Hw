@@ -2,10 +2,11 @@ header {
     background-image: url("../images/pokemon_header.png");
     padding: 2%;
     width: 1000px;
-    height: 300px;
+    height: 250px;
     background-repeat: no-repeat;
     background-position: center;
     margin-left: 12.5%;
+    
     
 }
 
