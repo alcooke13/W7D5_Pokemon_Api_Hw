@@ -1,6 +1,8 @@
+import './PokemonCard.css'
+
 const PokemonCard = ({pokemon}) => {
     return (
-        <li>{pokemon.name}</li>
+        <div className='pokemon-card'>{pokemon.name}</div>
     );
 };
 

@@ -1,0 +1,8 @@
+.pokemon-card {
+    outline: black 2px solid;
+    height: 200px;
+    width: 175px;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+}

@@ -4,9 +4,15 @@ h2 {
 }
 
 .pokemon-list-box {
-    display: block;
-    flex-direction: column;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     list-style: none;
     
+}
+
+.list-section {
+    padding-top: 10px;
+    outline: solid 2px red;
+    display: flex;
+    justify-content: center;
 }

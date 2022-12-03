@@ -5,13 +5,11 @@ const PokemonContainer = () => {
     const [pokemons, setPokemons] = useState([]);
     
     
-    const pokemonData = "https://pokeapi.co/api/v2/pokemon";
+    const pokemonData = "https://pokeapi.co/api/v2/pokemon?limit=50";
     fetch(pokemonData)
     .then(response => response.json())
     .then(pokemonList => setPokemons(pokemonList.results))
     
-    
-     
     
     return (
         <div>
