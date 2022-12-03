@@ -11,17 +11,20 @@ const PokemonList = () => {
     .then(response => response.json())
     .then(pokemonList => setPokemons(pokemonList.results))
 
-    
-
+    const handleFilterChange = (event) => {
+        setFilter(event.target.value.toUpperCase())
+    }
 
     return (
         <section className="list-section" >
-           <input type="text" placeholder="Search" />
-           <div className="pokemon-list-box">{pokemons.map((pokemon, index) => {
+           <input type="text" placeholder="Search" onChange={handleFilterChange} />
+           <div className="pokemon-list-box">{pokemons.filter((pokemon) => {
+            return filter === '' ? pokemon : pokemon.name.toUpperCase().includes(filter)
+           }).map((pokemon, index) => {
                 return (
                     <PokemonCard pokemon={pokemon} key={index}/>
-                )
-           })} 
+                ) 
+           })}
     
             </div>
         </section>
