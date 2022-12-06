@@ -1,9 +1,13 @@
 .pokemon-card {
     outline: black 2px solid;
-    height: 200px;
+    height: 250px;
     width: 175px;
     margin: 20px;
     text-align: center;
     padding: 10px;
     background-color: beige
+}
+
+li {
+    list-style: none;
 }
