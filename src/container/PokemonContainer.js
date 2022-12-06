@@ -10,27 +10,24 @@ const PokemonContainer = () => {
         fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
         .then(res => res.json())
         .then((data) => {
-          const pokemonDataPromises = data.results.map((pokemon) => {
+            // console.log(data)
+            const pokemonDataPromises = data.results.map((pokemon) => {
             return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-            .then(res => res.json())
+            .then(res => res.json());
           })  
           Promise.all(pokemonDataPromises)
           .then((results) => {
-            console.log(results)
-            setPokemons(results)
+            // console.log(results)
+            setPokemons(results);
           });
         });
     }, []);
-
-
-
 
     return (
         <section>
             <img src={Logo} height={200} width={400} alt="pokemon" id="logo"/>
             <div className="container-box">
                 <PokemonList pokemons={pokemons}/>
-            
             </div>
         </section>
     );
