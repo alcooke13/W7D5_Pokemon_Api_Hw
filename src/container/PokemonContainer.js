@@ -21,13 +21,18 @@ const PokemonContainer = () => {
             setPokemons(results);
           });
         });
+
+        
+
+
     }, []);
 
     return (
         <section>
+            
             <img src={Logo} height={200} width={400} alt="pokemon" id="logo"/>
             <div className="container-box">
-                <PokemonList pokemons={pokemons}/>
+                <PokemonList pokemons={pokemons} setPokemons={setPokemons}/>
             </div>
         </section>
     );
